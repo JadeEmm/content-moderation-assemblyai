@@ -24,7 +24,7 @@ if submit_button:
   with open('transcription.zip', 'rb') as zip_download:
     btn = st.download_button(
         label = ':gray[Download ZIP file]',
-        data = zip_downoad,
+        data = zip_download,
         file_name = 'transcription.zip',
         mim = 'application/zip'
     )
