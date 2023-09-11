@@ -13,10 +13,10 @@ api_key = st.secrets['api_key']
 #2. Retreive audio file from Youtube video: get_yt
 def get_yt(inputURL):
    """
-    Downloads the audio-only stream from a YouTube video specified by the input URL.
+   Downloads the audio-only stream from a YouTube video specified by the input URL.
 
-    Parameters:
-        inputURL (str): The URL of the YouTube video.
+   Parameters:
+      inputURL (str): The URL of the YouTube video.
 
     Returns:
         None
@@ -26,12 +26,12 @@ def get_yt(inputURL):
     also displays a progress bar and an information message indicating the
     progress of the download.
     """
-    video = YouTube(inputURL)
-    yt = video.streams.get_audio_only()
-    yt.download()
+   video = YouTube(inputURL)
+   yt = video.streams.get_audio_only()
+   yt.download()
 
-    st.info('**2.** Audio file has been retrieved from the Youtube video')
-    bar.progress(20)
+   st.info('**2.** Audio file has been retrieved from the Youtube video')
+   bar.progress(20)
 
 
 #3. Upload Youtube audio file to AssemblyAI: transcribe_yt
