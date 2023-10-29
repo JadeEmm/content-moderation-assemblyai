@@ -13,24 +13,24 @@ st.sidebar.header('Input URL')
 
 #create a form in the sidebar
 with st.sidebar.form(key='my_form'):
-  URL = st.text_input('Enter the URL of the Youtube video:')
-  submit_button = st.form_submit_button(label='Enter')
+    URL = st.text_input('Enter the URL of the Youtube video:')
+    submit_button = st.form_submit_button(label='Enter')
 
 #Run functions if the URL is entered
 if submit_button:
-  get_yt(URL)
-  transcribe_yt()
+    get_yt(URL)
+    transcribe_yt()
 
   with open('transcription.zip', 'rb') as zip_download:
       btn = st.download_button(
           label = ':gray[Download ZIP file]',
           data = zip_download,
           file_name = 'transcription.zip',
-          mim = 'application/zip'
+          mime = 'application/zip'
       )
 
 with st.sidebar.expander('Example URLs'):
-  st.code('https://www.youtube.com/watch?v=fcfQkxwz4Oo') #BBC video
-  st.code('https://www.youtube.com/watch?v=A3eHTe2JyW0') #Zoe video:
-  st.code('https://www.youtube.com/watch?v=uvqDTbusdUU') #TedX video
-  st.code('https://www.youtube.com/watch?v=WcLlpWmEpQ8') #Ted-Ed video
+    st.code('https://www.youtube.com/watch?v=fcfQkxwz4Oo') #BBC video
+    st.code('https://www.youtube.com/watch?v=A3eHTe2JyW0') #Zoe video:
+    st.code('https://www.youtube.com/watch?v=uvqDTbusdUU') #TedX video
+    st.code('https://www.youtube.com/watch?v=WcLlpWmEpQ8') #Ted-Ed video
