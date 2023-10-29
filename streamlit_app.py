@@ -20,14 +20,14 @@ with st.sidebar.form(key='my_form'):
 if submit_button:
     get_yt(URL)
     transcribe_yt()
-
-  with open('transcription.zip', 'rb') as zip_download:
-      btn = st.download_button(
-          label = ':gray[Download ZIP file]',
-          data = zip_download,
-          file_name = 'transcription.zip',
-          mime = 'application/zip'
-      )
+    
+    with open('transcription.zip', 'rb') as zip_download:
+        btn = st.download_button(
+            label = ':gray[Download ZIP file]',
+            data = zip_download,
+            file_name = 'transcription.zip',
+            mime = 'application/zip'
+        )
 
 with st.sidebar.expander('Example URLs'):
     st.code('https://www.youtube.com/watch?v=fcfQkxwz4Oo') #BBC video
